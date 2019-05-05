@@ -1,0 +1,8 @@
+<launch>
+  <node name="subscriber_cpp" pkg="beginner_tutorials" type="subscriber_cpp" output ="screen"/>
+  <node name="service_server_node_cpp" pkg="beginner_tutorials" type="service_server_node_cpp" output ="screen"/>
+  <node name="action_server_node_cpp" pkg="beginner_tutorials" type="action_server_node_cpp" output ="screen"/>
+  <node name="subscriber_py" pkg="beginner_tutorials" type="py_subscriber.py" output ="screen"/>
+  <node name="service_server_node_py" pkg="beginner_tutorials" type="py_service_server.py" output ="screen"/>
+  <node name="action_server_node_py" pkg="beginner_tutorials" type="py_action_server.py" output ="screen"/>
+</launch>
