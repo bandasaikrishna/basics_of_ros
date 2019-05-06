@@ -39,7 +39,7 @@ rospy.init_node('action_server_node_py') # initialzing the node with name "actio
 In the next line, a ActionServer is created.
 First argument is the name of the action.
 Second argument is the action message type.
-Thrid argument is an execute callback function that will be call whenever a new goal is received. 
+Thrid argument is an execute callback function that will be called whenever a new goal is received. 
 Fourth argument is auto_start. You should always set auto_start to False explicitly TO AVOID RACE CONDITIONS and start() should be called after construction of the server.
 '''
 server = actionlib.SimpleActionServer("factorial_py", TestAction, execute_cb, False)
