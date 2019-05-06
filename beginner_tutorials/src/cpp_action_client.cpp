@@ -10,14 +10,9 @@ This method is called when the goal completes
 void doneCb(const actionlib::SimpleClientGoalState& s,const actionlib::TestResultConstPtr& result)
 {
 	if (s == actionlib::SimpleClientGoalState::SUCCEEDED)
-	{
 		ROS_INFO("Action completed in Time. Answer= %d", result->result);
-	}
 	else
-	{
-		ROS_INFO("Action is preempted");
-	}
-	
+		ROS_INFO("Action is preempted");	
 }
 /*
  This method is called when the goal becomes active
@@ -32,11 +27,9 @@ This method is called whenever there is data present on feedback channel
 */
 void feedback_callback(const actionlib::TestFeedbackConstPtr& feedback)
 {
-	
 	ROS_INFO("Done till %d! =  %d",fac,feedback->feedback);
 	fac++;
 }
-
 
 void factorial(int num)
 {
