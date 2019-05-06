@@ -2,6 +2,9 @@
 #include <actionlib/server/simple_action_server.h> // This is the action library used for implementing simple actions.
 #include <actionlib/TestAction.h> // Messages used in the node must be included.
 
+/*
+This is the execute callback function that will run everytime a new goal is received. The argument "g" has the goal information of the action.
+*/
 void execute(const actionlib::TestGoalConstPtr& g, actionlib::SimpleActionServer<actionlib::TestAction>* server)  
 {
 
