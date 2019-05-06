@@ -47,7 +47,7 @@ int main(int argc, char** argv)
 In the next line, a ActionServer is created.
 First argument is the node handle.
 Second argument is the name of the action.
-Thrid argument is an execute callback function that will be call whenever a new goal is received. 
+Thrid argument is an execute callback function that will be called whenever a new goal is received. 
 Fourth argument is auto_start. You should always set auto_start to False explicitly TO AVOID RACE CONDITIONS and start() should be called after construction of the server.
 */
 	actionlib::SimpleActionServer<actionlib::TestAction> server(nh, "factorial_cpp", boost::bind(&execute, _1, &server), false);
