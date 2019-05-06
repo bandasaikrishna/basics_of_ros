@@ -14,6 +14,7 @@ void doneCb(const actionlib::SimpleClientGoalState& s,const actionlib::TestResul
 	else
 		ROS_INFO("Action is preempted");	
 }
+
 /*
  This method is called when the goal becomes active
 */
