@@ -44,6 +44,7 @@ Fourth argument is auto_start. You should always set auto_start to False explici
 '''
 server = actionlib.SimpleActionServer("factorial_py", TestAction, execute_cb, False)
 server.start()
+rospy.loginfo('Python Action server started to find the factorial of a number')
 
 '''
 rospy.spin() simply keeps your node from exiting until the node has been shutdown. Unlike roscpp::spin(), rospy.spin() does not affect the subscriber callback functions, as those have their own threads.
