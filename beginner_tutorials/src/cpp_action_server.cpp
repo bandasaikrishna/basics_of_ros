@@ -55,6 +55,7 @@ Fourth argument is auto_start. You should always set auto_start to False explici
 */
 	actionlib::SimpleActionServer<actionlib::TestAction> server(nh, "factorial_cpp", boost::bind(&execute, _1, &server), false);
 	server.start();
+	ROS_INFO("CPP Action server started to find the factorial of a number");
 
 /*
 ros::spin() is used to call the callback methods in the code. Without out spin(), callback methods are never executed. 
