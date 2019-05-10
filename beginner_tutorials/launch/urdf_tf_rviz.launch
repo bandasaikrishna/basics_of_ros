@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+ <arg name="gui" default="true" />
+
+<!--The below line will load the robot's urdf file on paramerter serve with variable name robot_description. Rviz will use this display the robot in visualizer-->
+ <param name="robot_description" textfile="$(find urdf_tutorial)/urdf/06-flexible.urdf" />
+ 
+<!--use_gui is used by joint_state_publisher node whether or not to dispaly the controller gui which is used to move the joints-->
+ <param name="use_gui" value="$(arg gui)"/>
+ 
+<!--The joint_state_publisher node will publish fake joint positon values on "/joint_states" topic. This node should not be used when working with real hardware since "/joint_states" topic must conatin the data from real joint sensors-->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> 
+ 
+<!--robot_state_publisher node will publish transforms of all the frames on "/tf" and "/tf_static topic"-->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  
+<!--The below line will launh the rviz-->  
+  <node name="rviz" pkg="rviz" type="rviz"/> 
+  
+</launch>
