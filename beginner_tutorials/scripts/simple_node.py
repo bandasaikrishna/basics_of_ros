@@ -10,7 +10,7 @@ rate = rospy.Rate(10) # 10hz
 
 while not rospy.is_shutdown(): # run the node until Ctrl-C is pressed
 
-	#Wirte your code here
+	#Write your code here
 
 	rospy.loginfo("simple_node in python is running. count= %d",count) #debug statement
 	
