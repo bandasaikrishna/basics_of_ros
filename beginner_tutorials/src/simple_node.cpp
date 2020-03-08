@@ -3,7 +3,7 @@
 int main(int argc, char** argv)
 {
 	int count = 0;
-	ros::init(argc, argv, "simple_node_cpp"); // Node declared with name "simple_node_cpp"
+	ros::init(argc, argv, "simple_node"); // Node declared with name "simple_node_cpp"
 	ros::NodeHandle nh; // NodeHandle will actually initialze the node
 	ros::Rate loop_rate(10); // 10Hz
 	
