@@ -122,8 +122,8 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(simple_node_cpp src/simple_node.cpp)
-target_link_libraries(simple_node_cpp ${catkin_LIBRARIES})
+add_executable(simple_node src/simple_node.cpp)
+target_link_libraries(simple_node ${catkin_LIBRARIES})
 
 add_executable(publisher_cpp src/cpp_publisher.cpp)
 target_link_libraries(publisher_cpp ${catkin_LIBRARIES})
